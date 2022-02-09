@@ -1,0 +1,92 @@
+body{
+    font-family: sans-serif;
+    font-size: 12.5px;
+    background-color: black;
+    color: red;
+}
+
+.team{
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.driver{
+    text-align: center;
+    height: 50px;
+}
+
+.driverPoints{
+    text-align: center;
+}
+
+.grandPrix{
+    text-align: right;
+}
+
+.grandPrix input{
+    max-width: 30px;
+}
+
+.fastestLap input{
+    max-width: 30px;
+}
+
+.mercedes{
+    background-color: #00D2BE;
+    color: black;
+    height: 50px;
+}
+
+.redBull{
+    background-color: #0600EF;
+    color: #ff0026;
+    height: 50px;
+}
+
+.ferrari{
+    background-color: #DC0000;
+    color: yellow;
+    height: 50px;
+}
+
+.mclaren{
+    background-color: #FF8700;
+    color: #005fd8;
+    height: 50px;
+}
+
+.alpine{
+    background-color: #0090FF;
+    color: white;
+    height: 50px;
+}
+
+.alphaTauri{
+    background-color: #2B4562;
+    color: white;
+    height: 50px;
+}
+
+.astonMartin{
+    background-color: #006F62;
+    color: white;
+    height: 50px;
+}
+
+.williams{
+    background-color: #005AFF;
+    color: white;
+    height: 50px;
+}
+
+.alfaRomeo{
+    background-color: #900000;
+    color: #01804f;
+    height: 50px;
+}
+
+.haas{
+    background-color: #FFFFFF;
+    color: #ed1a3b;
+    height: 50px;
+}

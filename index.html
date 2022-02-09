@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>driversstandings</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            font-size: 12.5px;
+            background-color: black;
+            color: red;
+        }
+
+        .team{
+            text-align: center;
+            font-size: 1.25em;
+        }
+
+        .driver{
+            text-align: center;
+            height: 50px;
+        }
+
+        .driverPoints{
+            text-align: center;
+        }
+
+        .grandPrix{
+            text-align: right;
+        }
+
+        .grandPrix input{
+            max-width: 30px;
+        }
+
+        .fastestLap input{
+            max-width: 30px;
+        }
+
+        .mercedes{
+            background-color: #00D2BE;
+            color: black;
+            height: 50px;
+        }
+
+        .redBull{
+            background-color: #0600EF;
+            color: #ff0026;
+            height: 50px;
+        }
+
+        .ferrari{
+            background-color: #DC0000;
+            color: yellow;
+            height: 50px;
+        }
+
+        .mclaren{
+            background-color: #FF8700;
+            color: #005fd8;
+            height: 50px;
+        }
+
+        .alpine{
+            background-color: #0090FF;
+            color: white;
+            height: 50px;
+        }
+
+        .alphaTauri{
+            background-color: #2B4562;
+            color: white;
+            height: 50px;
+        }
+
+        .astonMartin{
+            background-color: #006F62;
+            color: white;
+            height: 50px;
+        }
+
+        .williams{
+            background-color: #005AFF;
+            color: white;
+            height: 50px;
+        }
+
+        .alfaRomeo{
+            background-color: #900000;
+            color: #01804f;
+            height: 50px;
+        }
+
+        .haas{
+            background-color: #FFFFFF;
+            color: #ed1a3b;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr class = "index">
+        <th class = "team">Constructors</th>
+        <th class = "driver">Drivers</th>
+        <th class = "driverPoints">Points</th>
+        <div class = "points">
+            <th class = "fastestLap">Fastest</th>
+            <th class = "grandPrix">BHR</th>
+            <th class = "grandPrix">SAU</th>
+            <th class = "grandPrix">AUS</th>
+            <th class = "grandPrix">SMR</th>
+            <th class = "grandPrix">MIA</th>
+            <th class = "grandPrix">ESP</th>
+            <th class = "grandPrix">MCO</th>
+            <th class = "grandPrix">AZE</th>
+            <th class = "grandPrix">CAN</th>
+            <th class = "grandPrix">GBR</th>
+            <th class = "grandPrix">AUT</th>
+            <th class = "grandPrix">FRA</th>
+            <th class = "grandPrix">HUN</th>
+            <th class = "grandPrix">BEL</th>
+            <th class = "grandPrix">NLD</th>
+            <th class = "grandPrix">ITA</th>
+            <th class = "grandPrix">RUS</th>
+            <th class = "grandPrix">SGP</th>
+            <th class = "grandPrix">JPN</th>
+            <th class = "grandPrix">TEX</th>
+            <th class = "grandPrix">MEX</th>
+            <th class = "grandPrix">BRA</th>
+            <th class = "grandPrix">ABD</th>
+        </div>
+    </tr>
+    <tr class = "mercedes">
+        <th class = "team">Mercedes</th>
+        <th class = "driver">Lewis<br>Hamilton</th>
+        <td class = "driverPoints" id = "lewisPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "mercedes">
+        <th class = "team">Mercedes</th>
+        <th class = "driver">George<br>Russel</th>
+        <td class = "driverPoints" id = "georgePoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "redBull">
+        <th class = "team">Red Bull</th>
+        <th class = "driver">Max<br>Verstappen</th>
+        <td class = "driverPoints" id = "maxPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "redBull">
+        <th class = "team">Red Bull</th>
+        <th class = "driver">Sergio<br>Perez</th>
+        <td class = "driverPoints" id = "sergioPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "ferrari">
+        <th class = "team">Ferrari</th>
+        <th class = "driver">Charles<br>Leclerc</th>
+        <td class = "driverPoints" id = "charlesPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "ferrari">
+        <th class = "team">Ferrari</th>
+        <th class = "driver">Carlos<br>Sainz</th>
+        <td class = "driverPoints" id = "carlosPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "mclaren">
+        <th class = "team">McLaren</th>
+        <th class = "driver">Lando<br>Norris</th>
+        <td class = "driverPoints" id = "landoPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "mclaren">
+        <th class = "team">McLaren</th>
+        <th class = "driver">Daniel<br>Riccardo</th>
+        <td class = "driverPoints" id = "danielPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "alpine">
+        <th class = "team">Alpine</th>
+        <th class = "driver">Esteban<br>Ocon</th>
+        <td class = "driverPoints" id = "estebanPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "alpine">
+        <th class = "team">Alpine</th>
+        <th class = "driver">Fernando<br>Alonso</th>
+        <td class = "driverPoints" id = "fernandoPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "alphaTauri">
+        <th class = "team">Alpha Tauri</th>
+        <th class = "driver">Pierre<br>Gasly</th>
+        <td class = "driverPoints" id = "pierrePoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "alphaTauri">
+        <th class = "team">Alpha Tauri</th>
+        <th class = "driver">Yuki<br>Tsunoda</th>
+        <td class = "driverPoints" id = "yukiPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "astonMartin">
+        <th class = "team">Aston Martin</th>
+        <th class = "driver">Lance<br>Stroll</th>
+        <td class = "driverPoints" id = "lancePoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "astonMartin">
+        <th class = "team">Aston Martin</th>
+        <th class = "driver">Sebastian<br>Vettel</th>
+        <td class = "driverPoints" id = "sebastianPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "williams">
+        <th class = "team">Williams</th>
+        <th class = "driver">Nicholas<br>Latifi</th>
+        <td class = "driverPoints" id = "nicholasPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "williams">
+        <th class = "team">Williams</th>
+        <th class = "driver">Alexander<br>Albon</th>
+        <td class = "driverPoints" id = "alexanderPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "alfaRomeo">
+        <th class = "team">Alfa Romeo</th>
+        <th class = "driver">Valtteri<br>Bottas</th>
+        <td class = "driverPoints" id = "valtteriPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "alfaRomeo">
+        <th class = "team">Alfa Romeo</th>
+        <th class = "driver">Guanyu<br>Zhou</th>
+        <td class = "driverPoints" id = "guanyuPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "haas">
+        <th class = "team">Haas</th>
+        <th class = "driver">Mick<br>Schumacher</th>
+        <td class = "driverPoints" id = "mickPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "haas">
+        <th class = "team">Haas</th>
+        <th class = "driver">Nikita<br>Mazepin</th>
+        <td class = "driverPoints" id = "nikitaPoint"></td>
+        <div class = "points">
+            <th class = "fastestLap"><input type = "number"></th>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+            <td class = "grandPrix"><input type = "number"></td>
+        </div>
+    </tr>
+    <tr class = "index">
+        <th class = "team">Constructors</th>
+        <th class = "driver">Drivers</th>
+        <th class = "driverPoints">Points</th>
+        <div class = "points">
+            <th class = "fastestLap">Fastest</th>
+            <th class = "grandPrix">BHR</th>
+            <th class = "grandPrix">SAU</th>
+            <th class = "grandPrix">AUS</th>
+            <th class = "grandPrix">SMR</th>
+            <th class = "grandPrix">MIA</th>
+            <th class = "grandPrix">ESP</th>
+            <th class = "grandPrix">MCO</th>
+            <th class = "grandPrix">AZE</th>
+            <th class = "grandPrix">CAN</th>
+            <th class = "grandPrix">GBR</th>
+            <th class = "grandPrix">AUT</th>
+            <th class = "grandPrix">FRA</th>
+            <th class = "grandPrix">HUN</th>
+            <th class = "grandPrix">BEL</th>
+            <th class = "grandPrix">NLD</th>
+            <th class = "grandPrix">ITA</th>
+            <th class = "grandPrix">RUS</th>
+            <th class = "grandPrix">SGP</th>
+            <th class = "grandPrix">JPN</th>
+            <th class = "grandPrix">TEX</th>
+            <th class = "grandPrix">MEX</th>
+            <th class = "grandPrix">BRA</th>
+            <th class = "grandPrix">ABD</th>
+        </div>
+    </tr>
+</table>
+<script src = "test.js"></script>
+</body>
+</html>
